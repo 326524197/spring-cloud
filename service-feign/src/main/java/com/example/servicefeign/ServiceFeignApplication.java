@@ -17,12 +17,13 @@ import org.springframework.web.client.RestTemplate;
 @EnableHystrixDashboard//在主程序启动类中加入@EnableHystrixDashboard注解，开启hystrixDashboard：
 public class ServiceFeignApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ServiceFeignApplication.class, args);
-	}
-	@Bean
-	@LoadBalanced
-	RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ServiceFeignApplication.class, args);
+    }
+
+    @Bean
+    @LoadBalanced
+    RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
 }

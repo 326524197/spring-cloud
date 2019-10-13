@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScan("com.example.mybatisspring.mapper") //在启动类中添加对mapper包扫描@MapperScan
 public class MybatisSpringApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(MybatisSpringApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(MybatisSpringApplication.class, args);
+    }
 }

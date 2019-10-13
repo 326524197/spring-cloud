@@ -17,13 +17,13 @@ public class UserController {
 
     @RequestMapping("/getUsers")
     public List<UserEntity> getUsers() {
-        List<UserEntity> users=userMapper.getAll();
+        List<UserEntity> users = userMapper.getAll();
         return users;
     }
 
     @RequestMapping("/getUser")
     public UserEntity getUser(Long id) {
-        UserEntity user=userMapper.getOne(id);
+        UserEntity user = userMapper.getOne(id);
         return user;
     }
 
@@ -32,12 +32,12 @@ public class UserController {
         userMapper.insert(user);
     }
 
-    @RequestMapping(value="update")
+    @RequestMapping(value = "update")
     public void update(UserEntity user) {
         userMapper.update(user);
     }
 
-    @RequestMapping(value="/delete/{id}")
+    @RequestMapping(value = "/delete/{id}")
     public void delete(@PathVariable("id") Long id) {
         userMapper.delete(id);
     }

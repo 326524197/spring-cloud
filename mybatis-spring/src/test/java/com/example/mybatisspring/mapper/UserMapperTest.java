@@ -1,6 +1,5 @@
 package com.example.mybatisspring.mapper;
 
-import com.example.mybatisspring.mapper.UserMapper;
 import com.example.mybatisspring.entity.UserEntity;
 import com.example.mybatisspring.enums.UserSexEnum;
 import org.junit.Assert;
@@ -9,8 +8,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
-
 
 import java.util.List;
 
@@ -33,9 +30,9 @@ public class UserMapperTest {
     @Test
     public void testQuery() throws Exception {
         List<UserEntity> users = UserMapper.getAll();
-        if(users==null || users.size()==0){
+        if (users == null || users.size() == 0) {
             System.out.println("is null");
-        }else{
+        } else {
             System.out.println(users.toString());
         }
     }
